@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="20.1.7.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Report1" DisplayName="Faktura" Margins="100, 100, 39, 45" PageWidth="850" PageHeight="1100" Version="20.1" DataSource="#Ref-0" Font="Arial, 9.75pt">
+  <Extensions>
+    <Item1 Ref="2" Key="DataSerializationExtension" Value="XtraReport" />
+    <Item2 Ref="3" Key="DataEditorExtension" Value="XtraReport" />
+    <Item3 Ref="4" Key="ParameterEditorExtension" Value="XtraReport" />
+  </Extensions>
+  <Bands>
+    <Item1 Ref="5" ControlType="TopMarginBand" Name="TopMargin" HeightF="39.0625" />
+    <Item2 Ref="6" ControlType="BottomMarginBand" Name="BottomMargin" HeightF="45.3125" />
+    <Item3 Ref="7" ControlType="DetailBand" Name="Detail" HeightF="12.5" />
+    <Item4 Ref="8" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="155.2083">
+      <GroupFields>
+        <Item1 Ref="9" FieldName="Oid" />
+      </GroupFields>
+      <Controls>
+        <Item1 Ref="10" ControlType="XRLabel" Name="label9" Multiline="true" Text="label9" SizeF="160.9375,23" LocationFloat="327.0833,104.125" Font="Arial, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="11" EventName="BeforePrint" PropertyName="Text" Expression="[Numer]" />
+          </ExpressionBindings>
+          <StylePriority Ref="12" UseFont="false" />
+        </Item1>
+        <Item2 Ref="13" ControlType="XRLabel" Name="label8" Multiline="true" Text="Faktura VAT nr:" SizeF="117.1875,23" LocationFloat="195.3125,104.125" Font="Arial, 12pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="14" UseFont="false" />
+        </Item2>
+        <Item3 Ref="15" ControlType="XRLabel" Name="label7" Multiline="true" Text="label7" SizeF="328.0208,23" LocationFloat="311.9792,56.00001" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="16" EventName="BeforePrint" PropertyName="Text" Expression="[Kontrahent].[AdresSiedziby].[PelnyAdres]" />
+          </ExpressionBindings>
+        </Item3>
+        <Item4 Ref="17" ControlType="XRLabel" Name="label6" Multiline="true" Text="NIP:" SizeF="76.04172,23" LocationFloat="311.9791,32.99999" Padding="2,2,0,0,100" />
+        <Item5 Ref="18" ControlType="XRLabel" Name="label5" Multiline="true" Text="label5" SizeF="251.9792,23" LocationFloat="388.0208,32.99999" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="19" EventName="BeforePrint" PropertyName="Text" Expression="[Kontrahent].[NIP]" />
+          </ExpressionBindings>
+        </Item5>
+        <Item6 Ref="20" ControlType="XRLabel" Name="label4" Multiline="true" Text="label4" SizeF="328.0208,23" LocationFloat="311.9792,10.00001" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="[Kontrahent].[Nazwa]" />
+          </ExpressionBindings>
+        </Item6>
+        <Item7 Ref="22" ControlType="XRLabel" Name="label3" Multiline="true" Text="Inwalidów Wojennych 69" SizeF="205.2083,23" LocationFloat="10.00001,56.00001" Padding="2,2,0,0,100" />
+        <Item8 Ref="23" ControlType="XRLabel" Name="label2" Multiline="true" Text="ACME Piekary Śląskie" SizeF="205.2083,23" LocationFloat="10.00001,32.99999" Padding="2,2,0,0,100" />
+        <Item9 Ref="24" ControlType="XRLabel" Name="label1" Multiline="true" Text="Wystawca" SizeF="100,23" LocationFloat="10.00001,10.00001" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="25" UseFont="false" />
+        </Item9>
+      </Controls>
+    </Item4>
+    <Item5 Ref="26" ControlType="GroupFooterBand" Name="GroupFooter1">
+      <Controls>
+        <Item1 Ref="27" ControlType="XRTable" Name="table1" SizeF="318.518463,25" LocationFloat="331.4814,9.999974" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,96" Borders="All">
+          <Rows>
+            <Item1 Ref="28" ControlType="XRTableRow" Name="tableRow1" Weight="11.5">
+              <Cells>
+                <Item1 Ref="29" ControlType="XRTableCell" Name="tableCell1" Weight="0.4913830081247692" TextFormatString="{0:n2}" Multiline="true" Text="tableCell1" TextAlignment="TopRight">
+                  <ExpressionBindings>
+                    <Item1 Ref="30" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscNetto]" />
+                  </ExpressionBindings>
+                </Item1>
+                <Item2 Ref="31" ControlType="XRTableCell" Name="tableCell2" Weight="0.20387094949493281" TextFormatString="{0:n2}" Multiline="true" Text="tableCell2" TextAlignment="TopRight">
+                  <ExpressionBindings>
+                    <Item1 Ref="32" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscVat]" />
+                  </ExpressionBindings>
+                </Item2>
+                <Item3 Ref="33" ControlType="XRTableCell" Name="tableCell3" Weight="0.20387197748621511" TextFormatString="{0:n2}" Multiline="true" Text="tableCell3" TextAlignment="TopRight">
+                  <ExpressionBindings>
+                    <Item1 Ref="34" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscBrutto]" />
+                  </ExpressionBindings>
+                </Item3>
+              </Cells>
+            </Item1>
+          </Rows>
+          <StylePriority Ref="35" UseFont="false" />
+        </Item1>
+      </Controls>
+    </Item5>
+    <Item6 Ref="36" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="PozycjeFaktury" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="37" ControlType="DetailBand" Name="Detail1" HeightF="25">
+          <Controls>
+            <Item1 Ref="38" ControlType="XRTable" Name="table3" SizeF="650,25" LocationFloat="0,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="39" ControlType="XRTableRow" Name="tableRow3" Weight="11.5">
+                  <Cells>
+                    <Item1 Ref="40" ControlType="XRTableCell" Name="tableCell8" Weight="0.39201188849274227" Multiline="true" Text="tableCell8">
+                      <ExpressionBindings>
+                        <Item1 Ref="41" EventName="BeforePrint" PropertyName="Text" Expression="[Towar].[Nazwa]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="42" ControlType="XRTableCell" Name="tableCell9" Weight="0.13720396324022283" TextFormatString="{0:n2}" Multiline="true" Text="tableCell9" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="43" EventName="BeforePrint" PropertyName="Text" Expression="[CenaJednostkowa]" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="44" ControlType="XRTableCell" Name="tableCell10" Weight="0.08616876365165034" TextFormatString="{0:n2}" Multiline="true" Text="tableCell10" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="45" EventName="BeforePrint" PropertyName="Text" Expression="[Ilosc]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="46" ControlType="XRTableCell" Name="tableCell22" Weight="0.090729763775887581" Multiline="true" Text="tableCell22" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="47" EventName="BeforePrint" PropertyName="Text" Expression="[Towar].[JednostkaMiary].[Symbol]" />
+                      </ExpressionBindings>
+                    </Item4>
+                    <Item5 Ref="48" ControlType="XRTableCell" Name="tableCell11" Weight="0.21696254391642011" TextFormatString="{0:n2}" Multiline="true" Text="tableCell11" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="49" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscNetto]" />
+                      </ExpressionBindings>
+                    </Item5>
+                    <Item6 Ref="50" ControlType="XRTableCell" Name="tableCell24" Weight="0.15384615384615386" Multiline="true" Text="tableCell24" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="51" EventName="BeforePrint" PropertyName="Text" Expression="[Towar].[StawkaVat].[Symbol]" />
+                      </ExpressionBindings>
+                    </Item6>
+                    <Item7 Ref="52" ControlType="XRTableCell" Name="tableCell12" Weight="0.15384615384615386" TextFormatString="{0:n2}" Multiline="true" Text="tableCell12" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="53" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscVat]" />
+                      </ExpressionBindings>
+                    </Item7>
+                    <Item8 Ref="54" ControlType="XRTableCell" Name="tableCell13" Weight="0.15384615384615386" TextFormatString="{0:n2}" Multiline="true" Text="tableCell13" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="55" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscBrutto]" />
+                      </ExpressionBindings>
+                    </Item8>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="56" ControlType="ReportHeaderBand" Name="ReportHeader" HeightF="25">
+          <Controls>
+            <Item1 Ref="57" ControlType="XRTable" Name="table4" TextAlignment="MiddleCenter" SizeF="650,25" LocationFloat="0,0" Font="Arial, 9.75pt, style=Bold" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="58" ControlType="XRTableRow" Name="tableRow4" Weight="11.5">
+                  <Cells>
+                    <Item1 Ref="59" ControlType="XRTableCell" Name="tableCell15" Weight="0.3920118234848835" Multiline="true" Text="Nazwa towaru" TextAlignment="MiddleCenter">
+                      <StylePriority Ref="60" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="61" ControlType="XRTableCell" Name="tableCell16" Weight="0.1372040932559403" Multiline="true" Text="Cena Jednostkowa" TextAlignment="MiddleRight">
+                      <StylePriority Ref="62" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="63" ControlType="XRTableCell" Name="tableCell17" Weight="0.086168698643791619" Multiline="true" Text="Ilosc" TextAlignment="MiddleRight">
+                      <StylePriority Ref="64" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="65" ControlType="XRTableCell" Name="tableCell21" Weight="0.090729763775887581" Multiline="true" Text="J.m." TextAlignment="MiddleRight">
+                      <StylePriority Ref="66" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="67" ControlType="XRTableCell" Name="tableCell18" Weight="0.21696254391642011" Multiline="true" Text="Wartosc Netto" TextAlignment="MiddleRight">
+                      <StylePriority Ref="68" UseTextAlignment="false" />
+                    </Item5>
+                    <Item6 Ref="69" ControlType="XRTableCell" Name="tableCell23" Weight="0.15384615384615386" Multiline="true" Text="% VAT" TextAlignment="MiddleRight">
+                      <StylePriority Ref="70" UseTextAlignment="false" />
+                    </Item6>
+                    <Item7 Ref="71" ControlType="XRTableCell" Name="tableCell19" Weight="0.15384615384615386" Multiline="true" Text="Wartosc Vat" TextAlignment="MiddleRight">
+                      <StylePriority Ref="72" UseTextAlignment="false" />
+                    </Item7>
+                    <Item8 Ref="73" ControlType="XRTableCell" Name="tableCell20" Weight="0.15384615384615386" Multiline="true" Text="Wartosc Brutto" TextAlignment="MiddleRight">
+                      <StylePriority Ref="74" UseTextAlignment="false" />
+                    </Item8>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="75" UseFont="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item6>
+    <Item7 Ref="76" ControlType="DetailReportBand" Name="DetailReport1" Level="1" DataMember="PozycjeFaktury" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="77" ControlType="DetailBand" Name="Detail2" HeightF="28.125" Visible="false">
+          <Controls>
+            <Item1 Ref="78" ControlType="XRTable" Name="table5" SizeF="318.518433,25" LocationFloat="331.4817,3.125" Padding="2,2,0,0,96">
+              <Rows>
+                <Item1 Ref="79" ControlType="XRTableRow" Name="tableRow5" Weight="11.5">
+                  <Cells>
+                    <Item1 Ref="80" ControlType="XRTableCell" Name="tableCell7" Weight="0.4" Multiline="true" Text="tableCell7">
+                      <ExpressionBindings>
+                        <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="[Towar].[StawkaVat].[Symbol]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="82" ControlType="XRTableCell" Name="tableCell14" Weight="0.4" Multiline="true" Text="tableCell14" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="83" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscNetto]" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="84" ControlType="XRTableCell" Name="tableCell25" Weight="0.4" Multiline="true" Text="tableCell25" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="85" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscVat]" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="86" ControlType="XRTableCell" Name="tableCell26" Weight="0.4" Multiline="true" Text="tableCell26" TextAlignment="TopRight">
+                      <ExpressionBindings>
+                        <Item1 Ref="87" EventName="BeforePrint" PropertyName="Text" Expression="[WartoscBrutto]" />
+                      </ExpressionBindings>
+                    </Item4>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="88" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="0">
+          <GroupFields>
+            <Item1 Ref="89" FieldName="Towar.StawkaVat.Symbol" />
+          </GroupFields>
+        </Item2>
+        <Item3 Ref="90" ControlType="GroupFooterBand" Name="GroupFooter2" HeightF="25">
+          <Controls>
+            <Item1 Ref="91" ControlType="XRTable" Name="table6" SizeF="318.5186,25" LocationFloat="331.481567,0" Padding="2,2,0,0,96" Borders="All">
+              <Rows>
+                <Item1 Ref="92" ControlType="XRTableRow" Name="tableRow6" Weight="11.5">
+                  <Cells>
+                    <Item1 Ref="93" ControlType="XRTableCell" Name="tableCell27" Weight="0.4" Multiline="true" Text="tableCell27">
+                      <ExpressionBindings>
+                        <Item1 Ref="94" EventName="BeforePrint" PropertyName="Text" Expression="[Towar].[StawkaVat].[Symbol]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="95" ControlType="XRTableCell" Name="tableCell28" Weight="0.4" Multiline="true" Text="tableCell28" TextAlignment="TopRight">
+                      <Summary Ref="96" Running="Group" />
+                      <ExpressionBindings>
+                        <Item1 Ref="97" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([WartoscNetto])" />
+                      </ExpressionBindings>
+                    </Item2>
+                    <Item3 Ref="98" ControlType="XRTableCell" Name="tableCell29" Weight="0.4" Multiline="true" Text="tableCell29" TextAlignment="TopRight">
+                      <Summary Ref="99" Running="Group" />
+                      <ExpressionBindings>
+                        <Item1 Ref="100" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([WartoscVat])" />
+                      </ExpressionBindings>
+                    </Item3>
+                    <Item4 Ref="101" ControlType="XRTableCell" Name="tableCell30" Weight="0.4" Multiline="true" Text="tableCell30" TextAlignment="TopRight">
+                      <Summary Ref="102" Running="Group" />
+                      <ExpressionBindings>
+                        <Item1 Ref="103" EventName="BeforePrint" PropertyName="Text" Expression="sumSum([WartoscBrutto])" />
+                      </ExpressionBindings>
+                    </Item4>
+                  </Cells>
+                </Item1>
+              </Rows>
+            </Item1>
+          </Controls>
+        </Item3>
+      </Bands>
+    </Item7>
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" Name="collectionDataSource1" ObjectTypeName="Solution2.Module.BusinessObjects.Faktura" ObjectType="DevExpress.Persistent.Base.ReportsV2.CollectionDataSource,DevExpress.Persistent.Base.v20.1" TopReturnedRecords="0">
+      <Sorting Ref="104" />
+    </Item1>
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

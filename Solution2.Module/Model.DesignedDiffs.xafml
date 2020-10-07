@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application Title="Solution2">
+  <BOModel>
+    <Class Name="Solution2.Module.BusinessObjects.StawkaVat" DefaultListViewAllowEdit="True" />
+  </BOModel>
+  <Options DataAccessMode="Client">
+    <LayoutManagerOptions RequiredFieldMark="*" />
+  </Options>
+  <SchemaModules>
+    <SchemaModule Name="SchedulerModuleBase" Version="20.1.7.0" IsNewNode="True" />
+    <SchemaModule Name="SystemModule" Version="20.1.7.0" IsNewNode="True" />
+  </SchemaModules>
+  <Views>
+    <DetailView Id="Kontrahent_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Kontrahent" RelativeSize="100">
+              <LayoutGroup Id="Kontrahent_col1" RelativeSize="49.971925884334645">
+                <LayoutItem Id="Nazwa" RelativeSize="4.3994413407821229" />
+                <LayoutItem Id="NIP" RelativeSize="3.35195530726257" />
+                <LayoutItem Id="Regon" RelativeSize="3.35195530726257" />
+                <LayoutItem Id="AdresSiedziby.Ulica" Index="3" RelativeSize="3.35195530726257" />
+                <LayoutGroup Id="Autoc8a5effe-6d83-4be1-848b-cf3b293a9136" ShowCaption="False" Caption="" Direction="Horizontal" Index="4" RelativeSize="85.544692737430168" IsNewNode="True">
+                  <LayoutGroup Id="Autof20f7c2f-4db9-4aae-bf1b-ab35b80e2fc8" ShowCaption="False" Caption="" Index="0" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="AdresSiedziby.NrDomu" ViewItem="AdresSiedziby.NrDomu" Index="0" RelativeSize="3.9183673469387754" IsNewNode="True" />
+                    <LayoutItem Id="AdresSiedziby.KodPocztowy" ViewItem="AdresSiedziby.KodPocztowy" Index="1" RelativeSize="96.08163265306122" IsNewNode="True" />
+                  </LayoutGroup>
+                  <LayoutGroup Id="Autod63264cd-859e-46b3-b31b-37338415a054" ShowCaption="False" Caption="" Index="1" RelativeSize="50" IsNewNode="True">
+                    <LayoutItem Id="AdresSiedziby.NrLokalu" ViewItem="AdresSiedziby.NrLokalu" Index="0" RelativeSize="3.9183673469387754" IsNewNode="True" />
+                    <LayoutItem Id="AdresSiedziby.Miejscowosc" ViewItem="AdresSiedziby.Miejscowosc" Index="1" RelativeSize="96.08163265306122" IsNewNode="True" />
+                  </LayoutGroup>
+                </LayoutGroup>
+                <LayoutItem Id="AdresSiedziby.PelnyAdres" Removed="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Kontrahent_col2" RelativeSize="50.028074115665355" Caption="Kontrahent_col2">
+                <LayoutItem Id="AdresKorespondencyjny" RelativeSize="100" Index="0" />
+                <LayoutItem Id="AdresSiedziby.KodPocztowy" RelativeSize="23.333333333333332" Index="0" Removed="True" />
+                <LayoutItem Id="AdresSiedziby.Miejscowosc" RelativeSize="19.811320754716981" Index="0" Removed="True" />
+                <LayoutItem Id="AdresSiedziby.NrLokalu" RelativeSize="23.333333333333332" Index="0" Removed="True" />
+                <LayoutItem Id="AdresSiedziby.NrDomu" RelativeSize="18.505338078291814" Removed="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="74.669312169312164" Caption="Oid" Removed="True">
+              <LayoutItem Id="Oid" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Kontrahent_ListView">
+      <Columns>
+        <ColumnInfo Id="AdresSiedzibyKodPocztowy" PropertyName="AdresSiedziby.KodPocztowy" IsNewNode="True" />
+        <ColumnInfo Id="AdresSiedzibyMiescowosc" PropertyName="AdresSiedziby.Miejscowosc" IsNewNode="True" />
+      </Columns>
+    </ListView>
+    <ListView Id="Towar_ListView" DataAccessMode="Server" />
+    <ListView Id="Towar_LookupListView" DataAccessMode="Server" />
+  </Views>
+</Application>

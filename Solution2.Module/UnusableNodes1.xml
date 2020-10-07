@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application>
+  <Views Id="Views">
+    <DetailView Id="Produkt_DetailView">
+      <Layout Id="Layout">
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <LayoutGroup Id="Produkt" RelativeSize="31.866666666666667">
+              <LayoutGroup Id="Produkt_col1" RelativeSize="50">
+                <LayoutItem Id="Nazwa" RelativeSize="28.108108108108109" />
+                <LayoutItem Id="KodProduktu" RelativeSize="23.783783783783782" />
+                <LayoutItem Id="EAN" RelativeSize="48.108108108108105" />
+              </LayoutGroup>
+              <LayoutGroup Id="Produkt_col2" RelativeSize="50">
+                <LayoutItem Id="CenaJednostkowa" RelativeSize="28.108108108108109" />
+                <LayoutItem Id="StawkaVat" RelativeSize="71.891891891891888" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="XPObject" Caption="Oid" RelativeSize="68.13333333333334">
+              <LayoutItem Id="Oid" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="Produkt_ListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Oid" Index="0" />
+        <ColumnInfo Id="Nazwa" Index="1" />
+        <ColumnInfo Id="KodProduktu" Index="2" />
+        <ColumnInfo Id="EAN" Index="3" />
+        <ColumnInfo Id="CenaJednostkowa" Index="4" />
+      </Columns>
+    </ListView>
+    <ListView Id="Produkt_LookupListView">
+      <Columns Id="Columns">
+        <ColumnInfo Id="Oid" Index="0" />
+        <ColumnInfo Id="Nazwa" Index="1" />
+        <ColumnInfo Id="KodProduktu" Index="2" />
+        <ColumnInfo Id="EAN" Index="3" />
+        <ColumnInfo Id="CenaJednostkowa" Index="4" />
+      </Columns>
+    </ListView>
+  </Views>
+</Application>
