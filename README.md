@@ -10,3 +10,6 @@
 
 
 <a href="https://docs.devexpress.com/XPO/2041/create-a-data-model/relationships-between-objects" target="_blank">relacje pomiędzy obiektami XPO</a>
+
+
+<a href="https://docs.devexpress.com/eXpressAppFramework/116516/concepts/business-model-design/non-persistent-objects" target="_blank">non-persistent-objects</a>

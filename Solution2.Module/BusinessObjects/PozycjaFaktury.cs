@@ -18,6 +18,8 @@ namespace Solution2.Module.BusinessObjects
         { }
 
 
+        PozycjaFaktury pozycjaKorygowana;
+        PozycjaFaktury pozycjaKorygujaca;
         decimal wartoscBrutto;
         decimal wartoscVat;
         decimal wartoscNetto;
@@ -33,7 +35,7 @@ namespace Solution2.Module.BusinessObjects
             set
             {
                 var oldFaktura = faktura;
-                bool modified =    SetPropertyValue(nameof(Faktura), ref faktura, value);
+                bool modified = SetPropertyValue(nameof(Faktura), ref faktura, value);
                 if (modified && !IsLoading && !IsSaving && oldFaktura != faktura)
                 {
 
@@ -112,6 +114,19 @@ namespace Solution2.Module.BusinessObjects
             set => SetPropertyValue(nameof(WartoscBrutto), ref wartoscBrutto, value);
         }
 
+
+        public PozycjaFaktury PozycjaKorygujaca
+        {
+            get => pozycjaKorygujaca;
+            set => SetPropertyValue(nameof(PozycjaKorygujaca), ref pozycjaKorygujaca, value);
+        }
+        
+        public PozycjaFaktury PozycjaKorygowana
+        {
+            get => pozycjaKorygowana;
+            set => SetPropertyValue(nameof(PozycjaKorygowana), ref pozycjaKorygowana, value);
+        }
+
         public override void AfterConstruction()
         {
             base.AfterConstruction();
@@ -120,6 +135,9 @@ namespace Solution2.Module.BusinessObjects
 
         private void PrzeliczPozycje()
         {
+            if (pozycjaKorygowana != null)
+                return;
+
             var stawka = Towar?.StawkaVat?.Wartosc ?? 0;
             WartoscNetto = Ilosc * CenaJednostkowa;
             WartoscBrutto = WartoscNetto * (100 + stawka) / 100;

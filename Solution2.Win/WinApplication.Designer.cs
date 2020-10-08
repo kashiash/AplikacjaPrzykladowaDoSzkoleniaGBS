@@ -46,6 +46,7 @@
             this.viewVariantsModule = new DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule();
             this.reportsWindowsFormsModuleV21 = new DevExpress.ExpressApp.ReportsV2.Win.ReportsWindowsFormsModuleV2();
             this.reportsModuleV21 = new DevExpress.ExpressApp.ReportsV2.ReportsModuleV2();
+            this.cloneObjectModule1 = new DevExpress.ExpressApp.CloneObject.CloneObjectModule();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // securityStrategyComplex1
@@ -61,8 +62,6 @@
             // 
             this.authenticationStandard1.LogonParametersType = typeof(DevExpress.ExpressApp.Security.AuthenticationStandardLogonParameters);
             // 
-            // auditTrailModule
-            // 
 
             // 
             // dashboardsModule
@@ -75,11 +74,11 @@
             // 
             // officeModule
             // 
-            this.officeModule.RichTextMailMergeDataType = null;
+            this.officeModule.RichTextMailMergeDataType = typeof(DevExpress.Persistent.BaseImpl.RichTextMailMergeData);
             // 
             // officeWindowsFormsModule
             // 
-            this.officeWindowsFormsModule.RichTextMailMergeDataType = null;
+            this.officeWindowsFormsModule.RichTextMailMergeDataType = typeof(DevExpress.Persistent.BaseImpl.RichTextMailMergeData);
             // 
             // validationModule
             // 
@@ -90,6 +89,10 @@
             // 
             this.reportsModuleV21.EnableInplaceReports = true;
             this.reportsModuleV21.ReportDataType = typeof(DevExpress.Persistent.BaseImpl.ReportDataV2);
+            // 
+            // cloneObjectModule1
+            // 
+            this.cloneObjectModule1.ClonerType = null;
             // 
             // Solution2WindowsFormsApplication
             // 
@@ -107,15 +110,16 @@
             this.Modules.Add(this.treeListEditorsModuleBase);
             this.Modules.Add(this.validationModule);
             this.Modules.Add(this.viewVariantsModule);
+            this.Modules.Add(this.cloneObjectModule1);
+            this.Modules.Add(this.reportsModuleV21);
             this.Modules.Add(this.module3);
             this.Modules.Add(this.dashboardsWindowsFormsModule);
             this.Modules.Add(this.officeWindowsFormsModule);
             this.Modules.Add(this.schedulerWindowsFormsModule);
             this.Modules.Add(this.treeListEditorsWindowsFormsModule);
             this.Modules.Add(this.validationWindowsFormsModule);
-            this.Modules.Add(this.module4);
-            this.Modules.Add(this.reportsModuleV21);
             this.Modules.Add(this.reportsWindowsFormsModuleV21);
+            this.Modules.Add(this.module4);
             this.Security = this.securityStrategyComplex1;
             this.UseOldTemplates = false;
             this.DatabaseVersionMismatch += new System.EventHandler<DevExpress.ExpressApp.DatabaseVersionMismatchEventArgs>(this.Solution2WindowsFormsApplication_DatabaseVersionMismatch);
@@ -149,5 +153,6 @@
         private DevExpress.ExpressApp.ViewVariantsModule.ViewVariantsModule viewVariantsModule;
         private DevExpress.ExpressApp.ReportsV2.Win.ReportsWindowsFormsModuleV2 reportsWindowsFormsModuleV21;
         private DevExpress.ExpressApp.ReportsV2.ReportsModuleV2 reportsModuleV21;
+        private DevExpress.ExpressApp.CloneObject.CloneObjectModule cloneObjectModule1;
     }
 }

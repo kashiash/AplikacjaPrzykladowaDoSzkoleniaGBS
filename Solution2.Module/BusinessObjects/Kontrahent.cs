@@ -20,6 +20,7 @@ namespace Solution2.Module.BusinessObjects
 
 
 
+        string uwagi;
         string daneDoFaktury;
         Adres adresSiedziby;
         Adres adresKorespondencyjny;
@@ -48,6 +49,15 @@ namespace Solution2.Module.BusinessObjects
         {
             get => regon;
             set => SetPropertyValue(nameof(Regon), ref regon, value);
+        }
+
+
+        
+        [Size(SizeAttribute.Unlimited)]
+        public string Uwagi
+        {
+            get => uwagi;
+            set => SetPropertyValue(nameof(Uwagi), ref uwagi, value);
         }
 
         //  [EditorAlias(EditorAliases.DetailPropertyEditor)]

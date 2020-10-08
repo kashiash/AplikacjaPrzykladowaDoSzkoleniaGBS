@@ -45,6 +45,9 @@ namespace Solution2.Win {
 #endif
             try {
                 winApplication.Setup();
+
+
+
                 winApplication.Start();
             }
             catch(Exception e) {

@@ -1,12 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application Title="Solution2">
   <BOModel>
+    <Class Name="DevExpress.Persistent.BaseImpl.RichTextMailMergeData" IsCloneable="True" />
     <Class Name="Solution2.Module.BusinessObjects.StawkaVat" DefaultListViewAllowEdit="True" />
   </BOModel>
+  <NavigationItems>
+    <Items>
+      <Item Id="Kartoteki">
+        <Items>
+          <Item Id="Faktura_ListView" Caption="Lista faktur" ImageName="BO_Invoice" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
   <Options DataAccessMode="Client">
     <LayoutManagerOptions RequiredFieldMark="*" />
   </Options>
   <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="20.1.7.0" IsNewNode="True" />
     <SchemaModule Name="SchedulerModuleBase" Version="20.1.7.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="20.1.7.0" IsNewNode="True" />
   </SchemaModules>
