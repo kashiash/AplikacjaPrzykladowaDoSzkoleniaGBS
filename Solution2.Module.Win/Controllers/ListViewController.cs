@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Solution2.Module.Win.Controllers
 {
-   public class ListViewController : ViewController<DevExpress.ExpressApp.ListView>
+    public class ListViewController : ViewController<DevExpress.ExpressApp.ListView>
     {
         public ListViewController()
         {
@@ -25,8 +25,8 @@ namespace Solution2.Module.Win.Controllers
             {
                 GridView gridView = listEditor.GridView;
                 gridView.OptionsView.EnableAppearanceEvenRow = true;
-            //    gridView.OptionsView.ShowAutoFilterRow = true;
-            //    gridView.OptionsView.ShowFooter = true;
+                gridView.OptionsView.ShowAutoFilterRow = false;
+                gridView.OptionsView.ShowFooter = false;
                 gridView.OptionsView.ColumnAutoWidth = true;
 
                 var currentObjectModel = View.Model.ModelClass;
