@@ -57,7 +57,7 @@ namespace Solution2.Module.Win.Controllers
 
         private void Dv_Closed(object sender, EventArgs e)
         {
-            View.ObjectSpace.Refresh();
+           ObjectSpace.Refresh();
         }
 
         protected override void OnActivated()

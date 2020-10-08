@@ -25,8 +25,8 @@ namespace Solution2.Module.Win.Controllers
             {
                 GridView gridView = listEditor.GridView;
                 gridView.OptionsView.EnableAppearanceEvenRow = true;
-                gridView.OptionsView.ShowAutoFilterRow = true;
-                gridView.OptionsView.ShowFooter = true;
+            //    gridView.OptionsView.ShowAutoFilterRow = true;
+            //    gridView.OptionsView.ShowFooter = true;
                 gridView.OptionsView.ColumnAutoWidth = true;
 
                 var currentObjectModel = View.Model.ModelClass;

@@ -22,6 +22,112 @@
     <SchemaModule Name="SystemModule" Version="20.1.7.0" IsNewNode="True" />
   </SchemaModules>
   <Views>
+    <ListView Id="Faktura_PozycjeFaktury_ListView">
+      <Columns>
+        <ColumnInfo Id="PozycjaKorygowana" Width="228" Index="-1" />
+        <ColumnInfo Id="PozycjaKorygujaca" Width="217" Index="-1" />
+        <ColumnInfo Id="Towar" Width="96" />
+        <ColumnInfo Id="CenaJednostkowa" Width="211" />
+        <ColumnInfo Id="Ilosc" Width="81" />
+        <ColumnInfo Id="WartoscNetto" Width="170" />
+        <ColumnInfo Id="WartoscVat" Width="151" />
+        <ColumnInfo Id="WartoscBrutto" Width="178" />
+      </Columns>
+    </ListView>
+    <DetailView Id="FakturaKorygujaca_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main" RelativeSize="100">
+          <LayoutGroup Id="SimpleEditors" RelativeSize="100">
+            <TabbedGroup Id="Item5" CaptionLocation="Top" Index="0" RelativeSize="22.644376899696049" IsNewNode="True">
+              <LayoutGroup Id="Faktura" ShowCaption="True" Direction="Horizontal" Index="0" RelativeSize="100" IsNewNode="True">
+                <LayoutGroup Id="Faktura_col1" ShowCaption="False" Index="0" RelativeSize="50" IsNewNode="True">
+                  <LayoutItem Id="Numer" ViewItem="Numer" Index="0" RelativeSize="28.378378378378379" IsNewNode="True" />
+                  <LayoutItem Id="DataFaktury" ViewItem="DataFaktury" Index="1" RelativeSize="21.621621621621621" IsNewNode="True" />
+                  <LayoutItem Id="DataSprzedazy" ViewItem="DataSprzedazy" Index="2" RelativeSize="21.621621621621621" IsNewNode="True" />
+                  <LayoutItem Id="DataPlatnosci" ViewItem="DataPlatnosci" Index="3" RelativeSize="28.378378378378379" IsNewNode="True" />
+                </LayoutGroup>
+                <LayoutGroup Id="Faktura_col2" ShowCaption="False" Index="1" RelativeSize="50" IsNewNode="True">
+                  <LayoutItem Id="Kontrahent" ViewItem="Kontrahent" Index="0" RelativeSize="28.378378378378379" IsNewNode="True" />
+                  <LayoutItem Id="WartoscNetto" ViewItem="WartoscNetto" Index="1" RelativeSize="21.621621621621621" IsNewNode="True" />
+                  <LayoutItem Id="WartoscVat" ViewItem="WartoscVat" Index="2" RelativeSize="21.621621621621621" IsNewNode="True" />
+                  <LayoutItem Id="WartoscBrutto" ViewItem="WartoscBrutto" Index="3" RelativeSize="28.378378378378379" IsNewNode="True" />
+                </LayoutGroup>
+              </LayoutGroup>
+              <LayoutGroup Id="Item4" ShowCaption="True" CaptionLocation="Top" Index="1" RelativeSize="100" Caption="Korekta" IsNewNode="True">
+                <LayoutItem Id="KorygowanaFaktura" ViewItem="KorygowanaFaktura" Index="0" RelativeSize="28.378378378378379" IsNewNode="True" />
+                <LayoutItem Id="PowodKorekty" ViewItem="PowodKorekty" Index="1" RelativeSize="71.621621621621628" IsNewNode="True" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="XPObject" RelativeSize="77.355623100303944" Caption="Oid" Index="1">
+              <LayoutGroup Id="Item1" ShowCaption="True" Caption="Przed korektą" CaptionLocation="Top" Index="0" RelativeSize="38.015717092337916" IsNewNode="True">
+                <LayoutItem Id="PozycjePrzedKorekta" ViewItem="PozycjePrzedKorekta" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutGroup Id="Item2" ShowCaption="True" Caption="Po korekcie" CaptionLocation="Top" Index="1" RelativeSize="38.99803536345776" IsNewNode="True">
+                <LayoutItem Id="PozycjePoKorekcie" ViewItem="PozycjePoKorekcie" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+              <LayoutItem Id="Oid" RelativeSize="18.849840255591054" Index="1" Removed="True" />
+              <LayoutGroup Id="Item3" ShowCaption="True" Caption="Róznica" CaptionLocation="Top" Index="2" RelativeSize="22.986247544204321" IsNewNode="True">
+                <LayoutItem Id="PozycjeFaktury" ViewItem="PozycjeFaktury" Index="0" RelativeSize="100" IsNewNode="True" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="Faktura" RelativeSize="37.362637362637365" Removed="True">
+              <LayoutGroup Id="Faktura_col1" RelativeSize="50">
+                <LayoutItem Id="DataFaktury" RelativeSize="21.621621621621621" />
+                <LayoutItem Id="DataPlatnosci" RelativeSize="28.378378378378379" />
+                <LayoutItem Id="DataSprzedazy" RelativeSize="21.621621621621621" />
+                <LayoutItem Id="Numer" RelativeSize="28.378378378378379" />
+              </LayoutGroup>
+              <LayoutGroup Id="Faktura_col2" RelativeSize="50">
+                <LayoutItem Id="Kontrahent" RelativeSize="28.378378378378379" />
+                <LayoutItem Id="WartoscBrutto" RelativeSize="28.378378378378379" />
+                <LayoutItem Id="WartoscNetto" RelativeSize="21.621621621621621" />
+                <LayoutItem Id="WartoscVat" RelativeSize="21.621621621621621" />
+              </LayoutGroup>
+            </LayoutGroup>
+            <LayoutGroup Id="FakturaKorygujaca" RelativeSize="27.334235453315291" Removed="True">
+              <LayoutItem Id="KorygowanaFaktura" RelativeSize="51.639344262295083" Removed="True" />
+              <LayoutItem Id="PowodKorekty" RelativeSize="48.360655737704917" Removed="True" />
+            </LayoutGroup>
+          </LayoutGroup>
+          <TabbedGroup Id="Tabs" RelativeSize="21.504559270516719" Index="3" Removed="True">
+            <LayoutGroup Id="PozycjeFaktury" RelativeSize="0" Caption="Pozycje Faktury" Direction="Horizontal">
+              <LayoutItem Id="PozycjeFaktury" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="PozycjePoKorekcie" RelativeSize="0" Caption="Po korekcie" Direction="Horizontal">
+              <LayoutItem Id="PozycjePoKorekcie" RelativeSize="100" Removed="True" />
+            </LayoutGroup>
+            <LayoutGroup Id="PozycjePrzedKorekta" Caption="Przed korektą" RelativeSize="0" Direction="Horizontal">
+              <LayoutItem Id="PozycjePrzedKorekta" Removed="True" />
+            </LayoutGroup>
+          </TabbedGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+    <ListView Id="FakturaKorygujaca_PozycjePoKorekcie_ListView">
+      <Columns>
+        <ColumnInfo Id="PozycjaKorygowana" Width="228" Index="-1" />
+        <ColumnInfo Id="PozycjaKorygujaca" Width="217" Index="-1" />
+        <ColumnInfo Id="Towar" Width="96" />
+        <ColumnInfo Id="Ilosc" Width="81" />
+        <ColumnInfo Id="CenaJednostkowaNetto" Width="268" />
+        <ColumnInfo Id="WartoscNetto" Width="170" />
+        <ColumnInfo Id="WartoscVAT" Width="159" />
+        <ColumnInfo Id="WartoscBrutto" Width="178" />
+      </Columns>
+    </ListView>
+    <ListView Id="FakturaKorygujaca_PozycjePrzedKorekta_ListView">
+      <Columns>
+        <ColumnInfo Id="Faktura" Width="108" Index="-1" />
+        <ColumnInfo Id="PozycjaKorygowana" Index="-1" />
+        <ColumnInfo Id="PozycjaKorygujaca" Index="-1" />
+        <ColumnInfo Id="Towar" Width="96" />
+        <ColumnInfo Id="CenaJednostkowa" Width="211" />
+        <ColumnInfo Id="Ilosc" Width="81" />
+        <ColumnInfo Id="WartoscNetto" Width="170" />
+        <ColumnInfo Id="WartoscVat" Width="151" />
+        <ColumnInfo Id="WartoscBrutto" Width="178" />
+      </Columns>
+    </ListView>
     <DetailView Id="Kontrahent_DetailView">
       <Layout>
         <LayoutGroup Id="Main" RelativeSize="100">

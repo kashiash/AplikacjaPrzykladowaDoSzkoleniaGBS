@@ -1,4 +1,5 @@
-﻿using DevExpress.Persistent.Base;
+﻿using DevExpress.ExpressApp.DC;
+using DevExpress.Persistent.Base;
 using DevExpress.Xpo;
 using DevExpress.XtraSpreadsheet.Model;
 using System;
@@ -64,6 +65,7 @@ namespace Solution2.Module.BusinessObjects
 
 
         [ImmediatePostData]
+        [XafDisplayName("Cena")]
         public decimal CenaJednostkowa
         {
             get => cenaJednostkowa;

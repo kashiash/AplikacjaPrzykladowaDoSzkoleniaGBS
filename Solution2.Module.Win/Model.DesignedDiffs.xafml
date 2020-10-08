@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Application>
   <SchemaModules>
+    <SchemaModule Name="CloneObjectModule" Version="20.1.7.0" IsNewNode="True" />
     <SchemaModule Name="SchedulerModuleBase" Version="20.1.7.0" IsNewNode="True" />
     <SchemaModule Name="SchedulerWindowsFormsModule" Version="20.1.7.0" IsNewNode="True" />
     <SchemaModule Name="SystemModule" Version="20.1.7.0" IsNewNode="True" />
@@ -11,4 +12,27 @@
       <RegisteredPropertyEditor PropertyType="System.Decimal" DefaultDisplayFormat="{0:N}" DefaultEditMask="N" />
     </PropertyEditor>
   </ViewItems>
+  <Views>
+    <DetailView Id="FakturaKorygujaca_DetailView">
+      <Layout>
+        <LayoutGroup Id="Main">
+          <LayoutGroup Id="SimpleEditors">
+            <TabbedGroup Id="Item5">
+              <LayoutGroup Id="Faktura">
+                <LayoutGroup Id="Faktura_col1" RelativeSize="49.926035502958577" />
+                <LayoutGroup Id="Faktura_col2" RelativeSize="50.073964497041423" />
+              </LayoutGroup>
+            </TabbedGroup>
+            <LayoutGroup Id="XPObject">
+              <LayoutGroup Id="Item1" TextAlignMode="AlignWithChildren" RelativeSize="35.166994106090371" />
+              <SplitterItem Id="SplitterItem1" Index="1" RelativeSize="2.3575638506876229" IsNewNode="True" />
+              <LayoutGroup Id="Item2" TextAlignMode="AlignWithChildren" Index="2" RelativeSize="31.43418467583497" />
+              <SplitterItem Id="SplitterItem2" Index="3" RelativeSize="2.3575638506876229" IsNewNode="True" />
+              <LayoutGroup Id="Item3" TextAlignMode="AlignWithChildren" Index="4" RelativeSize="28.68369351669941" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </Layout>
+    </DetailView>
+  </Views>
 </Application>
