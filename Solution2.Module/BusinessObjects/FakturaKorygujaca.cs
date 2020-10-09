@@ -48,7 +48,8 @@ namespace Solution2.Module.BusinessObjects
         }
         private void PrzygotujPozycjePrzedKorekta()
         {
-            pozycjePrzedKorekta = new XPCollection<PozycjaFaktury>(Session, CriteriaOperator.Parse("Faktura = ?", KorygowanaFaktura));
+            pozycjePrzedKorekta = new XPCollection<PozycjaFaktury>(Session, 
+                CriteriaOperator.Parse("Faktura = ?", KorygowanaFaktura));
         }
 
         // pozycje po korekcie

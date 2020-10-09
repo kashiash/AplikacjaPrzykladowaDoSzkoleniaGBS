@@ -20,6 +20,7 @@ namespace Solution2.Module.BusinessObjects
 
 
 
+        TypKontrahenta typ;
         string uwagi;
         string daneDoFaktury;
         Adres adresSiedziby;
@@ -52,7 +53,7 @@ namespace Solution2.Module.BusinessObjects
         }
 
 
-        
+
         [Size(SizeAttribute.Unlimited)]
         public string Uwagi
         {
@@ -77,7 +78,7 @@ namespace Solution2.Module.BusinessObjects
             set => SetPropertyValue(nameof(AdresKorespondencyjny), ref adresKorespondencyjny, value);
         }
 
-        
+
         [Size(SizeAttribute.Unlimited)]
         [EditorAlias(EditorAliases.RichTextPropertyEditor)]
         public string DaneDoFaktury
@@ -86,6 +87,13 @@ namespace Solution2.Module.BusinessObjects
             set => SetPropertyValue(nameof(DaneDoFaktury), ref daneDoFaktury, value);
         }
 
+
+
+        public TypKontrahenta Typ
+        {
+            get => typ;
+            set => SetPropertyValue(nameof(Typ), ref typ, value);
+        }
 
         public override void AfterConstruction()
         {
@@ -101,5 +109,13 @@ namespace Solution2.Module.BusinessObjects
                 AdresKorespondencyjny = new Adres(Session);
             }
         }
+    }
+    public enum TypKontrahenta
+    {
+
+        maly = 1,
+        sredni = 2,
+        duzy = 3
+
     }
 }

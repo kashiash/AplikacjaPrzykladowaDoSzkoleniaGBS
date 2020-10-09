@@ -36,8 +36,6 @@ namespace Solution2.Module.Win.Controllers
                     gridView.OptionsView.ShowFooter = false;
                 }
             }
-
-
         }
     }
 }

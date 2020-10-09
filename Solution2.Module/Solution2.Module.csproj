@@ -170,6 +170,7 @@
     <Compile Include="BusinessObjects\TypTowaru.cs" />
     <Compile Include="BusinessObjects\Usluga.cs" />
     <Compile Include="Controllers\FakturaViewController.cs" />
+    <Compile Include="Controllers\KontrahentListViewController.cs" />
     <Compile Include="CustomFunction\KwotaSlownie.cs" />
     <Compile Include="DatabaseUpdate\Updater.cs" />
     <Compile Include="Module.cs">
